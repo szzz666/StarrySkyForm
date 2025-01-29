@@ -1,0 +1,7 @@
+{
+  "title": "标题",
+  "content": "内容",
+  "buttons": {
+    "按钮&textures/items/apple.png": ["say hello", "say world"]
+  }
+}
