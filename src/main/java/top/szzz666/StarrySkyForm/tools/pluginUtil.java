@@ -1,4 +1,4 @@
-package top.szzz666.nukkit_plugin.tools;
+package top.szzz666.StarrySkyForm.tools;
 
 import cn.nukkit.Player;
 import cn.nukkit.command.CommandSender;
@@ -7,16 +7,16 @@ import com.google.gson.Gson;
 import io.leego.banana.BananaUtils;
 import io.leego.banana.Font;
 import lombok.SneakyThrows;
-import top.szzz666.nukkit_plugin.entity.Form;
-import top.szzz666.nukkit_plugin.form.easy_form.Simple;
+import top.szzz666.StarrySkyForm.entity.Form;
+import top.szzz666.StarrySkyForm.form.easy_form.Simple;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-import static top.szzz666.nukkit_plugin.Main.*;
-import static top.szzz666.nukkit_plugin.tools.taskUtil.Async;
+import static top.szzz666.StarrySkyForm.Main.*;
+import static top.szzz666.StarrySkyForm.tools.taskUtil.Async;
 
 public class pluginUtil {
     // 获取所有在线玩家的名字

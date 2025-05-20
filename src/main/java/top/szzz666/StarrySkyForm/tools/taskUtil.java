@@ -1,9 +1,9 @@
-package top.szzz666.nukkit_plugin.tools;
+package top.szzz666.StarrySkyForm.tools;
 
 import cn.nukkit.scheduler.AsyncTask;
 
-import static top.szzz666.nukkit_plugin.Main.nkServer;
-import static top.szzz666.nukkit_plugin.Main.plugin;
+import static top.szzz666.StarrySkyForm.Main.nkServer;
+import static top.szzz666.StarrySkyForm.Main.plugin;
 
 
 public class taskUtil {

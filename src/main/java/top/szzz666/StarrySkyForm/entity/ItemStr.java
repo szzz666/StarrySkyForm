@@ -1,4 +1,4 @@
-package top.szzz666.nukkit_plugin.entity;
+package top.szzz666.StarrySkyForm.entity;
 
 import cn.nukkit.item.Item;
 import lombok.AllArgsConstructor;
@@ -14,7 +14,8 @@ public class ItemStr {
     private int count;
     private int pos;
     private String name;
-    public ItemStr(String item){
+
+    public ItemStr(String item) {
         String[] itemArr = item.split(":");
         id = Integer.parseInt(itemArr[0]);
         damage = Integer.parseInt(itemArr[1]);
@@ -22,12 +23,18 @@ public class ItemStr {
         pos = Integer.parseInt(itemArr[3]);
         name = itemArr[4];
     }
-    public Item toItem(){
+
+    public Item toItem() {
         Item item = Item.get(id, damage, count);
         item.setCustomName(name);
         return item;
     }
-    public boolean equals(Item item){
+
+    public boolean equals(Item item) {
         return id == item.getId() && damage == item.getDamage() && name.equals(item.getCustomName());
+    }
+
+    public boolean isAir() {
+        return id == 0;
     }
 }

@@ -1,4 +1,4 @@
-package top.szzz666.nukkit_plugin.form.easy_form;
+package top.szzz666.StarrySkyForm.form.easy_form;
 
 import cn.nukkit.Player;
 import cn.nukkit.form.element.ElementButton;
@@ -10,7 +10,7 @@ import lombok.Data;
 import java.util.ArrayList;
 import java.util.List;
 
-import static top.szzz666.nukkit_plugin.tools.taskUtil.Async;
+import static top.szzz666.StarrySkyForm.tools.taskUtil.Async;
 
 
 @Data

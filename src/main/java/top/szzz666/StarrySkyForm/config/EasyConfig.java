@@ -1,4 +1,4 @@
-package top.szzz666.nukkit_plugin.config;
+package top.szzz666.StarrySkyForm.config;
 
 import cn.nukkit.plugin.Plugin;
 import cn.nukkit.utils.Config;

@@ -1,14 +1,14 @@
-package top.szzz666.nukkit_plugin.form;
+package top.szzz666.StarrySkyForm.form;
 
 import cn.nukkit.Player;
 import cn.nukkit.form.element.ElementDropdown;
 import cn.nukkit.form.element.ElementInput;
-import top.szzz666.nukkit_plugin.form.easy_form.Custom;
-import top.szzz666.nukkit_plugin.form.easy_form.Simple;
+import top.szzz666.StarrySkyForm.form.easy_form.Custom;
+import top.szzz666.StarrySkyForm.form.easy_form.Simple;
 
 import java.util.Arrays;
 
-import static top.szzz666.nukkit_plugin.form.easy_form.Modal.tipsModal;
+import static top.szzz666.StarrySkyForm.form.easy_form.Modal.tipsModal;
 
 
 public class MyForm {

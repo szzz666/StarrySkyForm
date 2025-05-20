@@ -1,4 +1,4 @@
-package top.szzz666.nukkit_plugin.event;
+package top.szzz666.StarrySkyForm.event;
 
 import cn.nukkit.Player;
 import cn.nukkit.event.EventHandler;
@@ -9,15 +9,14 @@ import cn.nukkit.event.player.PlayerQuitEvent;
 import cn.nukkit.item.Item;
 import cn.nukkit.item.enchantment.Enchantment;
 import cn.nukkit.nbt.tag.CompoundTag;
-import top.szzz666.nukkit_plugin.entity.ItemStr;
+import top.szzz666.StarrySkyForm.entity.ItemStr;
 
 import java.util.HashMap;
 
-import static top.szzz666.nukkit_plugin.Main.ec;
-import static top.szzz666.nukkit_plugin.Main.nkServer;
-import static top.szzz666.nukkit_plugin.tools.pluginUtil.nkConsole;
-import static top.szzz666.nukkit_plugin.tools.pluginUtil.openForm;
-import static top.szzz666.nukkit_plugin.tools.taskUtil.Async;
+import static top.szzz666.StarrySkyForm.Main.ec;
+import static top.szzz666.StarrySkyForm.Main.nkServer;
+import static top.szzz666.StarrySkyForm.tools.pluginUtil.openForm;
+import static top.szzz666.StarrySkyForm.tools.taskUtil.Async;
 
 
 public class Listeners implements Listener {
@@ -55,6 +54,11 @@ public class Listeners implements Listener {
 
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
+        if(ec.getString("item") == null){
+            return;
+        }if(itemStr.isAir()){
+            return;
+        }
         Player player = event.getPlayer();
         Item item = player.getInventory().getItemInHand();
         if (!itemStr.equals(item)) {

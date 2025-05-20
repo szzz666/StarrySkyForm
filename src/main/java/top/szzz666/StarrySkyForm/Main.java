@@ -1,20 +1,16 @@
-package top.szzz666.nukkit_plugin;
+package top.szzz666.StarrySkyForm;
 
 import cn.nukkit.Server;
 import cn.nukkit.command.CommandSender;
 import cn.nukkit.plugin.Plugin;
 import cn.nukkit.plugin.PluginBase;
-import top.szzz666.nukkit_plugin.command.*;
-import top.szzz666.nukkit_plugin.config.EasyConfig;
-import top.szzz666.nukkit_plugin.entity.Form;
-import top.szzz666.nukkit_plugin.event.Listeners;
+import top.szzz666.StarrySkyForm.command.*;
+import top.szzz666.StarrySkyForm.config.EasyConfig;
+import top.szzz666.StarrySkyForm.event.Listeners;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
-import static top.szzz666.nukkit_plugin.config.MyConfig.initConfig;
-import static top.szzz666.nukkit_plugin.tools.pluginUtil.nkConsole;
-import static top.szzz666.nukkit_plugin.tools.pluginUtil.pluginNameLineConsole;
+import static top.szzz666.StarrySkyForm.config.MyConfig.initConfig;
+import static top.szzz666.StarrySkyForm.tools.pluginUtil.nkConsole;
+import static top.szzz666.StarrySkyForm.tools.pluginUtil.pluginNameLineConsole;
 
 
 public class Main extends PluginBase {
@@ -47,6 +43,8 @@ public class Main extends PluginBase {
         nkServer.getCommandMap().register(this.getName(), new OkFormCommand());
         nkServer.getCommandMap().register(this.getName(), new SpFormCommand());
         nkServer.getCommandMap().register(this.getName(), new TipsFormCommand());
+        nkServer.getCommandMap().register(this.getName(), new SpArgFormCommand());
+        nkServer.getCommandMap().register(this.getName(), new ClearInventoryCommand());
         pluginNameLineConsole();
         nkConsole("&b" + plugin.getName() + "插件开启");
         nkConsole("&c" + plugin.getName() + "如果遇到任何bug，请加入Q群进行反馈：894279534", 1);

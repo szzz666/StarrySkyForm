@@ -1,4 +1,4 @@
-package top.szzz666.nukkit_plugin.entity;
+package top.szzz666.StarrySkyForm.entity;
 
 import com.google.gson.Gson;
 import lombok.AllArgsConstructor;

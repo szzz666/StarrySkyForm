@@ -1,4 +1,4 @@
-package top.szzz666.nukkit_plugin.form.easy_form;
+package top.szzz666.StarrySkyForm.form.easy_form;
 
 import cn.nukkit.Player;
 import cn.nukkit.form.handler.FormResponseHandler;
@@ -6,7 +6,7 @@ import cn.nukkit.form.window.FormWindow;
 import cn.nukkit.form.window.FormWindowModal;
 import lombok.Data;
 
-import static top.szzz666.nukkit_plugin.tools.taskUtil.Async;
+import static top.szzz666.StarrySkyForm.tools.taskUtil.Async;
 
 
 @Data
@@ -15,6 +15,7 @@ public class Modal {
 
     private Runnable truer;
     private Runnable falser;
+    private Runnable close;
 
 
     public Modal(String title, String content, String trueButtonText, String falseButtonText) {
@@ -40,7 +41,13 @@ public class Modal {
     }
     public void show(Player player) {
         this.form.addHandler(FormResponseHandler.withoutPlayer(ignored -> {
-            if (form.getResponse().getClickedButtonId() == 0) {
+            if (this.form.wasClosed()) {
+                if (this.close != null) {
+                    this.close.run();
+                }
+                return;
+            }
+            if (this.form.getResponse().getClickedButtonId() == 0) {
                 if (this.truer != null) {
                     this.truer.run();
                 }
@@ -57,7 +64,13 @@ public class Modal {
 
     public void asyncShow(Player player) {
         this.form.addHandler(FormResponseHandler.withoutPlayer(ignored -> Async(() -> {
-            if (form.getResponse().getClickedButtonId() == 0) {
+            if (this.form.wasClosed()) {
+                if (this.close != null) {
+                    this.close.run();
+                }
+                return;
+            }
+            if (this.form.getResponse().getClickedButtonId() == 0) {
                 if (this.truer != null) {
                     this.truer.run();
                 }

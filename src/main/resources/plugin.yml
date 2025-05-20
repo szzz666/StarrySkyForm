@@ -1,5 +1,5 @@
 name: StarrySkyForm
-main: top.szzz666.nukkit_plugin.Main
+main: top.szzz666.StarrySkyForm.Main
 version: "1.0.0"
 author: szzz666
 api: ["1.0.0"]
