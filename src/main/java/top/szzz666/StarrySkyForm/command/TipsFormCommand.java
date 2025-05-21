@@ -3,6 +3,7 @@ package top.szzz666.StarrySkyForm.command;
 import cn.nukkit.Player;
 import cn.nukkit.command.Command;
 import cn.nukkit.command.CommandSender;
+import cn.nukkit.command.data.CommandParameter;
 import cn.nukkit.form.element.ElementLabel;
 import top.szzz666.StarrySkyForm.form.easy_form.Custom;
 import top.szzz666.StarrySkyForm.form.easy_form.Modal;
@@ -14,6 +15,10 @@ import static top.szzz666.StarrySkyForm.tools.taskUtil.Async;
 public class TipsFormCommand extends Command {
     public TipsFormCommand() {
         super(ec.getString("tipsFormCommand"), "弹窗提示");
+        this.commandParameters.clear();
+        this.commandParameters.put("default", new CommandParameter[]{
+                CommandParameter.newEnum("opt", new String[]{"modal", "custom", "simple"})
+        });
     }
 
     @Override
