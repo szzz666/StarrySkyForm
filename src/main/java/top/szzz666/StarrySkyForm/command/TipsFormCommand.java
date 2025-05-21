@@ -15,6 +15,7 @@ import static top.szzz666.StarrySkyForm.tools.taskUtil.Async;
 public class TipsFormCommand extends Command {
     public TipsFormCommand() {
         super(ec.getString("tipsFormCommand"), "弹窗提示");
+        this.setPermission("starry.sky.form.command");
         this.commandParameters.clear();
         this.commandParameters.put("default", new CommandParameter[]{
                 CommandParameter.newEnum("opt", new String[]{"modal", "custom", "simple"})
